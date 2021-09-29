@@ -62,6 +62,18 @@ for (let suite = 0; suite < suites.length; suite++) {
 }
 console.log(deck);
 
+// Eller ännu enklare (Men då missar vi möjligheten att använda cardValue om vi skulle behöva det av någon anledning)
+let deck = [];
+const suites = ["hearts", "spades", "clubs", "diamonds"];
+const values = [2, 3, 4, 5, 6, 7, 8, 9, 10, "knight", "queen", "king", "ace"];
+for (const suite of suites) {
+    for (const value of values) {
+        deck.push(value + ' of ' + suite);
+    }
+}
+console.log(deck);
+
+
 // 11. Loopa ut samtliga vänners favoritfrukter med en console.log().
 let friends = [
     {
