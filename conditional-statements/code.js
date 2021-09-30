@@ -1,5 +1,3 @@
-// If
-
 // Ta med hjälp av en if-sats reda på om talet a är större än b.
 
 let a = 10; let b = 20;
@@ -155,8 +153,6 @@ const bmiCalculator = (height, weight) => {
         return "fetma";
 }
 
-// Switch
-
 // Weekdays
 // Gör en funktion som tar ett nummer ( 1-7 ) och returnerar vilken veckodag numret motsvarar. 
 // Ex. 1 = måndag, 3 = untzdag. Om numret inte motsvarar någon veckodag skall funktionen returnera false.
@@ -195,3 +191,68 @@ const weekday2 = (dayOfWeek) => {
     ]
     return weekdays[dayOfWeek - 1] || false;
 }
+
+// Month
+// Gör en funktion som tar ett nummer ( 1-12 ) och returnerar vilken månad numret motsvarar. Ex. 1 = januari, 10 = oktober. 
+// Om numret inte motsvarar någon månad skall funktionen returnera false.
+const month = (monthNumber) => {
+    switch (monthNumber) {
+        case 1:
+            return "januari";
+        case 2:
+            return "februari";
+        case 3:
+            return "mars";
+        case 4:
+            return "april";
+        case 5:
+            return "maj";
+        case 6:
+            return "juni";
+        case 7:
+            return "juli";
+        case 7:
+            return "augusti";
+        case 7:
+            return "september";
+        case 7:
+            return "oktober";
+        case 7:
+            return "november";
+        case 7:
+            return "december";
+        default:
+            return false;
+    }
+}
+
+// Samma lösning baserat på om (monthNumber - 1) är inom spannet för en array med månader
+const month2 = (monthNumber) => {
+    const months = [
+        "januari",
+        "februari",
+        "mars",
+        "april",
+        "juni",
+        "juli",
+        "augusti",
+        "september",
+        "maj",
+        "oktober",
+        "november",
+        "december"
+    ]
+    return months[monthNumber - 1] || false;
+}
+
+
+// Skriv en ternary som tar reda på om sträng a är längre än b. 
+// Returnera yes! om det stämmer, och No! om det inte stämmer.
+a = 'hola bandola!';
+b = 'plipp, plopp, lolipop!';
+
+const isArg1Longer = (arg1, arg2) => {
+    return arg1.length > arg2.length ? "yes" : "no";
+}
+
+isArg1Longer(a, b);
