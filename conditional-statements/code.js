@@ -5,24 +5,24 @@
 let a = 10; let b = 20;
 
 if (a > b) {
-    console.log("Woop! Woop!");
+    console.log(`${a} är större än ${b}`);
 }
 
 // Ta med hjälp av en if-sats reda på om a är lika b.
 
-// let a = 'apple'; let b = 'pear';
+a = 'apple'; b = 'pear';
 
-// if (a === b) {
-//     console.log("Woop! Woop!");
-// }
+if (a === b) {
+    console.log(`${a} är samma som ${b}`);
+}
 
 // Ta med hjälp av en if-sats reda på om a inte är lika b.
 
-// let a = 'apple'; let b = 'pear';
+a = 'apple'; b = 'pear';
 
-// if (a !== b) {
-//     console.log("Woop! Woop!");
-// }
+if (a !== b) {
+    console.log(`${a} är inte samma som ${b}`);
+}
 
 // Else if
 
@@ -125,7 +125,7 @@ const balderOkToRide4 = (ridePass) => {
 // Skriv en funktion som tar en persons längd i cm samt vikt i kg och returnerar en BMI-klassificering.
 
 const bmiCalculator = (height, weight) => {
-    let bmi = (weight / ((height / 100) ^ 2));
+    const bmi = (weight / ((height / 100) ^ 2));
 
     if (bmi < 18.5)
         return "undervikt";
