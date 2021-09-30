@@ -217,15 +217,15 @@ const month = (monthNumber) => {
             return "juni";
         case 7:
             return "juli";
-        case 7:
+        case 8:
             return "augusti";
-        case 7:
+        case 9:
             return "september";
-        case 7:
+        case 10:
             return "oktober";
-        case 7:
+        case 11:
             return "november";
-        case 7:
+        case 12:
             return "december";
         default:
             return false;
