@@ -30,14 +30,15 @@ if (a !== b) {
 // Gör en funktion som heter getBiggest(a,b) som tar emot två stycken numeriska värden. 
 // Funktionen ska utvärdera vilket tal som är störst och returnera det.
 
-const biggest = (a, b) => {
+const getBiggest = (a, b) => {
     if (a > b)
         return a;
     else
         return b;
 }
 
-const biggest2 = (a, b) => {
+// Samma lösning med ternary
+const getBiggest2 = (a, b) => {
     return a > b ? a : b;
 }
 
@@ -50,10 +51,12 @@ const isEven = (num) => {
         return true;
 }
 
+// Samma lösning med ternary
 const isEven2 = (num) => {
     return num % 2 ? false : true;
 }
 
+// Samma lösning utan if/ternary
 const isEven3 = (num) => {
     return !(num % 2);
 }
@@ -62,14 +65,21 @@ const isEven3 = (num) => {
 // Gör en funktion som ska sitta i en sensor på lisebergs åkattration Helix. 
 // För att få åka helix ska man vara minst 150cm lång. Funktionen ska returnera true eller false.
 
-const longEnough = (length) => {
+const tallEnoughForHelix = (length) => {
     if (length < 150)
         return false;
     else
         return true;
 }
 
-const longEnough2 = (length) => {
+// Samma lösning med ternary
+const tallEnoughForHelix2 = (length) => {
+    return length < 150 ? false : true;
+}
+
+
+// Samma lösning utan if/ternary
+const tallEnoughForHelix3 = (length) => {
     return length >= 150;
 }
 
@@ -77,18 +87,25 @@ const longEnough2 = (length) => {
 // På Liseberg finns 4 olika åkband; small, medium, large och platinum. 
 // För att få åka Balder krävs large och platinum. 
 // Gör en funktion som tar argumentent ridePass och returnera true eller false.
-const balderOkToRide = (ridePass) => {
+const goodPassForBalder = (ridePass) => {
     if (ridePass === "large" || ridePass === "platinum")
         return true;
     else
         return false;
 }
 
-const balderOkToRide2 = (ridePass) => {
+// Samma lösning med ternary
+const goodPassForBalder2 = (ridePass) => {
+    return (ridePass === "large" || ridePass === "platinum") ? true : false;
+}
+
+// Samma lösning utan if/ternary
+const goodPassForBalder3 = (ridePass) => {
     return (ridePass === "large" || ridePass === "platinum");
 }
 
-const balderOkToRide3 = (ridePass) => {
+// Samma lösning, baserat på om ridePass finns som key i ett objekt
+const goodPassForBalder4 = (ridePass) => {
     const allowedPasses = {
         large: true,
         platinum: true
@@ -96,7 +113,8 @@ const balderOkToRide3 = (ridePass) => {
     return ridePass in allowedPasses;
 }
 
-const balderOkToRide4 = (ridePass) => {
+// Samma lösning baserat på om ridePass finns i en array
+const goodPassForBalder5 = (ridePass) => {
     const allowedPasses = [
         "large",
         "platinum"
@@ -164,6 +182,7 @@ const weekday = (dayOfWeek) => {
     }
 }
 
+// Samma lösning baserat på om (dayOfWeek - 1) är inom spannet för en array med veckodagar
 const weekday2 = (dayOfWeek) => {
     const weekdays = [
         "måndag",
