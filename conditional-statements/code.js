@@ -134,7 +134,7 @@ const goodPassForBalder5 = (ridePass) => {
 // Det bör dock tas med en nypa salt då vi alla människor är unika ( och awesome! ).
 // Formeln för BMI är följande:
 // (kroppsvikten i kg / kroppslängden i meter) * 2 
-// NOTE: Really (kg / (cm)^2)
+// NOTE: Really (kg / m^2)
 
 // Resultat från formeln delas in i olika viktklasser.
 // BMI                      Klassificering
