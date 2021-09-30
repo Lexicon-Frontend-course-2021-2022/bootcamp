@@ -29,10 +29,11 @@ if (a !== b) {
 // Funktionen ska utvärdera vilket tal som är störst och returnera det.
 
 const getBiggest = (a, b) => {
-    if (a > b)
+    if (a > b) {
         return a;
-    else
+    } else {
         return b;
+    }
 }
 
 // Samma lösning med ternary
@@ -43,10 +44,11 @@ const getBiggest2 = (a, b) => {
 // Even or not: Gör en funktion som tar ett number som argument. Ta reda på om talet är jämt eller udda.
 
 const isEven = (num) => {
-    if (num % 2)
+    if (num % 2) {
         return false;
-    else
+    } else {
         return true;
+    }
 }
 
 // Samma lösning med ternary
@@ -64,10 +66,11 @@ const isEven3 = (num) => {
 // För att få åka helix ska man vara minst 150cm lång. Funktionen ska returnera true eller false.
 
 const tallEnoughForHelix = (length) => {
-    if (length < 150)
+    if (length < 150) {
         return false;
-    else
+    } else {
         return true;
+    }
 }
 
 // Samma lösning med ternary
@@ -86,10 +89,11 @@ const tallEnoughForHelix3 = (length) => {
 // För att få åka Balder krävs large och platinum. 
 // Gör en funktion som tar argumentent ridePass och returnera true eller false.
 const goodPassForBalder = (ridePass) => {
-    if (ridePass === "large" || ridePass === "platinum")
+    if (ridePass === "large" || ridePass === "platinum") {
         return true;
-    else
+    } else {
         return false;
+    }
 }
 
 // Samma lösning med ternary
@@ -118,8 +122,9 @@ const goodPassForBalder5 = (ridePass) => {
         "platinum"
     ];
     for (pass in allowedPasses) {
-        if (ridePass === allowedPasses[pass])
+        if (ridePass === allowedPasses[pass]) {
             return true;
+        }
     }
     return false;
 }
@@ -143,14 +148,15 @@ const goodPassForBalder5 = (ridePass) => {
 const bmiCalculator = (height, weight) => {
     const bmi = (weight / ((height / 100) ^ 2));
 
-    if (bmi < 18.5)
+    if (bmi < 18.5) {
         return "undervikt";
-    else if (bmi <= 25)
+    } else if (bmi <= 25) {
         return "normalvikt";
-    else if (bmi <= 30)
+    } else if (bmi <= 30) {
         return "övervikt";
-    else
+    } else {
         return "fetma";
+    }
 }
 
 // Weekdays
