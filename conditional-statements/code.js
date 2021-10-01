@@ -80,6 +80,7 @@ const tallEnoughForHelix2 = (length) => {
 
 
 // Samma lösning utan if/ternary
+// NOTE: Inga conditionals i den här lösningen
 const tallEnoughForHelix3 = (length) => {
     return length >= 150;
 }
@@ -107,6 +108,7 @@ const goodPassForBalder3 = (ridePass) => {
 }
 
 // Samma lösning, baserat på om ridePass finns som key i ett objekt
+// NOTE: Inga conditionals i den här lösningen
 const goodPassForBalder4 = (ridePass) => {
     const allowedPasses = {
         large: true,
@@ -128,6 +130,17 @@ const goodPassForBalder5 = (ridePass) => {
     }
     return false;
 }
+
+// Samma lösning baserat på .includes
+// NOTE: Inga conditionals i den här lösningen
+const goodPassForBalder6 = (ridePass) => {
+    const allowedPasses = [
+        "large",
+        "platinum"
+    ];
+    return allowedPasses.includes(ridePass);
+}
+
 
 // BMI kalkylator: 
 // BMI ( Body Mass Index ) sägs vara ett hälsomått som visar på under eller övervikt. 
@@ -185,6 +198,7 @@ const weekday = (dayOfWeek) => {
 }
 
 // Samma lösning baserat på om (dayOfWeek - 1) är inom spannet för en array med veckodagar
+// NOTE: Inga conditionals i den här lösningen
 const weekday2 = (dayOfWeek) => {
     const weekdays = [
         "måndag",
@@ -233,6 +247,7 @@ const month = (monthNumber) => {
 }
 
 // Samma lösning baserat på om (monthNumber - 1) är inom spannet för en array med månader
+// NOTE: Inga conditionals i den här lösningen
 const month2 = (monthNumber) => {
     const months = [
         "januari",
