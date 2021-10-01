@@ -3,7 +3,10 @@ const inputPositiveInteger = defaultValue => {
     while (true) {
 
         /* Get number */
-        let i = Number(window.prompt("Hur många gånger ska vi iterera? Du kan bara välja ett positivt heltal.", defaultValue));
+        let i = window.prompt("Hur många gånger ska vi iterera? Du kan bara välja ett positivt heltal.", defaultValue);
+
+        /* Explicit type conversion */
+        i = Number(i);
 
         /* Basic sanity check */
         if (typeof i === 'number' && i >= 1 && Number.isInteger(i)) {
@@ -11,16 +14,17 @@ const inputPositiveInteger = defaultValue => {
         }
 
         /* Stupid user needs a slap! */
-        window.alert("Du måste mata in ett positivt heltal! Försök igen!");
+        window.alert("Du måste mata in ett positivt heltal, idiot! Försök igen!");
 
     }
 
 }
 
+
 // Output results as html
 const fizzBuzz = iterations => {
 
-    /* Get element to put new children in */
+    /* Get element to put our new children in */
     let list = document.querySelector("#result");
 
     for (let i = 1; i < iterations + 1; i++) {

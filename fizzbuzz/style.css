@@ -7,24 +7,42 @@ body {
     margin: 0;
     font-family: sans-serif;
     font-weight: bolder;
+    font-size: 20px;
 }
 
 p {
     margin: 0;
 }
 
+#result {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#result > p {
+    margin: 10px;
+    padding: 10px 0;
+    width: 100px;
+    text-align: center;
+}
+
 .fizz {
     color: green;
+    background-color: #cfc;
 }
 
 .buzz {
     color: orange;
+    background-color: #ffc;
 }
 
 .both {
     color: red;
+    background-color: #fcf;
 }
 
 .variable {
     color: blue;
+    background-color: #ccf;
 }
