@@ -1,0 +1,23 @@
+/* CSS simply for visual verification that the tags get correct classes */
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+p {
+    margin: 0;
+
+}
+.fizz {
+    text-decoration: underline;
+}
+
+.buzz {
+    font-weight: bolder;
+
+}
+
+.variable {
+    color: blue;
+}
