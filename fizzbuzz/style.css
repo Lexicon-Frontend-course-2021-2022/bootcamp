@@ -1,4 +1,7 @@
-/* Super-basic CSS simply for visual verification that the tags get correct classes */
+/* 
+    Super basic CSS for fizzbuzz example
+    Used for visual verification that my tags get the correct class
+*/
 
 body {
     margin: 0;
@@ -11,11 +14,11 @@ p {
 }
 
 .fizz {
-    color: orange;
+    color: green;
 }
 
 .buzz {
-    color: green;
+    color: orange;
 }
 
 .both {
