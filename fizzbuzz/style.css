@@ -1,6 +1,5 @@
 /* 
-    Super basic CSS for fizzbuzz example
-    Used for visual verification that my tags get the correct class
+    CSS for fizzbuzz example
 */
 
 body {
@@ -8,10 +7,47 @@ body {
     font-family: sans-serif;
     font-weight: bolder;
     font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-p {
+header {
+    background-image: url("https://images.unsplash.com/photo-1626690394167-6951ee018c56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header > h1 {
+    color: #fad;
+    text-shadow: 2px 2px 2px #008;
+    font-size: 80px;
+    padding: 0;
     margin: 0;
+}
+
+#legend {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+#legend > p {
+    width: 180px;
+}
+
+
+p {
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 2px #008;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #result {
@@ -21,10 +57,8 @@ p {
 }
 
 #result > p {
-    margin: 10px;
     padding: 10px 0;
     width: 100px;
-    text-align: center;
 }
 
 .fizz {
