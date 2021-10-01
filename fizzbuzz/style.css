@@ -1,21 +1,25 @@
-/* CSS simply for visual verification that the tags get correct classes */
+/* Super-basic CSS simply for visual verification that the tags get correct classes */
 
 body {
     margin: 0;
     font-family: sans-serif;
+    font-weight: bolder;
 }
 
 p {
     margin: 0;
-
 }
+
 .fizz {
-    text-decoration: underline;
+    color: orange;
 }
 
 .buzz {
-    font-weight: bolder;
+    color: green;
+}
 
+.both {
+    color: red;
 }
 
 .variable {

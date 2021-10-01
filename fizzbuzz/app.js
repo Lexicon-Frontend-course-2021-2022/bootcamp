@@ -1,5 +1,5 @@
 // Input positive integer
-const inputPositiveInteger = (defaultValue) => {
+const inputPositiveInteger = defaultValue => {
     while (true) {
         let i = Number(window.prompt("Hur många gånger ska vi iterera? Du kan bara välja ett positivt heltal.", defaultValue));
 
@@ -13,27 +13,28 @@ const inputPositiveInteger = (defaultValue) => {
 }
 
 // Output results
-const fizzBuzz = (iterations) => {
+const fizzBuzz = iterations => {
     let list = document.querySelector("#result");
+
     for (let i = 1; i < iterations + 1; i++) {
         let result = '';
-        let htmlClass = [];
+        let htmlClass = '';
 
         if (!(i % 3)) {
             result += "Fizz";
-            htmlClass.push("fizz");
+            htmlClass = "fizz";
         }
         if (!(i % 5)) {
             result += "Buzz";
-            htmlClass.push("buzz");
+            htmlClass = htmlClass ? "both" : "buzz";
         }
         if (!result) {
             result = i;
-            htmlClass.push("variable");
+            htmlClass = "variable";
         }
 
         let item = document.createElement('p');
-        item.className = htmlClass.join(' ');
+        item.className = htmlClass;
         item.innerText = result;
         list.appendChild(item);
     }
