@@ -13,5 +13,5 @@ const teacher = {
 // Print out to document, on a new line, the key / value pairs of the object.
 
 for (key in teacher) {
-    document.writeln(`${key}: ${teacher[key]}<br>`);
+    document.writeln(`<br>${key}: ${teacher[key]}`);
 }
