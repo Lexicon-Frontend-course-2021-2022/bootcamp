@@ -9,12 +9,12 @@ const inputPositiveInteger = defaultValue => {
         i = Number(i);
 
         /* Basic sanity check */
-        if (typeof i === 'number' && i >= 1 && Number.isInteger(i)) {
+        if (typeof i === 'number' && i > 0 && Number.isInteger(i)) {
             return i;
         }
 
         /* Stupid user needs a slap! */
-        window.alert("Du måste mata in ett positivt heltal, idiot! Försök igen!");
+        window.alert("Du måste mata in ett positivt heltal, pucko! Släpp sargen och försök igen!");
 
     }
 
@@ -25,7 +25,7 @@ const inputPositiveInteger = defaultValue => {
 const fizzBuzz = iterations => {
 
     /* Get element to put our new children in */
-    let list = document.querySelector("#result");
+    let parent = document.querySelector("#result");
 
     for (let i = 1; i < iterations + 1; i++) {
         let result = '';
@@ -46,10 +46,10 @@ const fizzBuzz = iterations => {
         }
 
         /* Output result as a new child */
-        let item = document.createElement('p');
-        item.className = htmlClass;
-        item.innerText = result;
-        list.appendChild(item);
+        let child = document.createElement('p');
+        child.className = htmlClass;
+        child.innerText = result;
+        parent.appendChild(child);
 
     }
 
