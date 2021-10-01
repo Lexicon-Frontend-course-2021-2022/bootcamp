@@ -13,7 +13,5 @@ const teacher = {
 // Print out to document, on a new line, the key / value pairs of the object.
 
 for (key in teacher) {
-    let child = document.createElement('p');
-    child.innerText = `${key}: ${teacher[key]}`;
-    document.body.appendChild(child);
+    document.write(`${key}: ${teacher[key]}<br>`);
 }
