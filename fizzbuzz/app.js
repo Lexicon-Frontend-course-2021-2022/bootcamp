@@ -55,6 +55,7 @@ const fizzBuzz = iterations => {
 
 }
 
+
 // Do it! :D
 fizzBuzz(inputPositiveInteger(100));
 
