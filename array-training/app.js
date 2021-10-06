@@ -285,7 +285,7 @@ persons = [
   }
 ]
 
-result = [...persons.sort((a, b) => a.age - b.age)];
+result = persons.sort((a, b) => a.age - b.age);
 console.log(result);
 
 // 30. I person - arrayen ovan, sortera objekten efter ålder, äldst först.
@@ -316,7 +316,7 @@ persons = [
   }
 ]
 
-result = [...persons.sort((a, b) => b.age - a.age)];
+result = persons.sort((a, b) => b.age - a.age);
 console.log(result);
 
 // 31. I person - arrayen ovan, sortera objekten i bokstavsordning efter deras namn
@@ -347,7 +347,7 @@ persons = [
   }
 ]
 
-result = [...persons.sort((a, b) => a.name > b.name ? 0 : -1)];
+result = persons.sort((a, b) => a.name > b.name ? 0 : -1);
 console.log(result);
 
 //   .map()
@@ -409,7 +409,7 @@ persons = [
     age: 3
   }
 ]
-result = [...persons.map((person) => { person.name = person.name.split('').reverse().join(''); return person; })];
+result = persons.map((person) => { person.name = person.name.split('').reverse().join(''); return person; });
 console.log(result);
 
 // Loop arrays
