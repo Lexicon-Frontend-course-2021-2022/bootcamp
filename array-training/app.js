@@ -203,6 +203,33 @@ console.log(result);
 
 // 26. Skriv ut alla namn som är under 18 år från arrayen ovan.
 
+persons = [
+  {
+    name: "Felicia",
+    age: 12
+  },
+  {
+    name: "Pelle",
+    age: 20
+  },
+  {
+    name: "Peter",
+    age: 59
+  },
+  {
+    name: "Anna",
+    age: 32
+  },
+  {
+    name: "Jocke",
+    age: 18
+  },
+  {
+    name: "Ella",
+    age: 3
+  }
+]
+
 result = persons.filter(person => person.age < 18);
 console.log(result);
 
@@ -221,23 +248,157 @@ result = nums.sort((a, b) => a - b);
 console.log(result);
 
 // 29. I person - arrayen ovan, sortera objekten efter ålder, yngst först.
+persons = [
+  {
+    name: "Felicia",
+    age: 12
+  },
+  {
+    name: "Pelle",
+    age: 20
+  },
+  {
+    name: "Peter",
+    age: 59
+  },
+  {
+    name: "Anna",
+    age: 32
+  },
+  {
+    name: "Jocke",
+    age: 18
+  },
+  {
+    name: "Ella",
+    age: 3
+  }
+]
+
 result = [...persons.sort((a, b) => a.age - b.age)];
 console.log(result);
 
 // 30. I person - arrayen ovan, sortera objekten efter ålder, äldst först.
+persons = [
+  {
+    name: "Felicia",
+    age: 12
+  },
+  {
+    name: "Pelle",
+    age: 20
+  },
+  {
+    name: "Peter",
+    age: 59
+  },
+  {
+    name: "Anna",
+    age: 32
+  },
+  {
+    name: "Jocke",
+    age: 18
+  },
+  {
+    name: "Ella",
+    age: 3
+  }
+]
+
 result = [...persons.sort((a, b) => b.age - a.age)];
 console.log(result);
 
 // 31. I person - arrayen ovan, sortera objekten i bokstavsordning efter deras namn
+persons = [
+  {
+    name: "Felicia",
+    age: 12
+  },
+  {
+    name: "Pelle",
+    age: 20
+  },
+  {
+    name: "Peter",
+    age: 59
+  },
+  {
+    name: "Anna",
+    age: 32
+  },
+  {
+    name: "Jocke",
+    age: 18
+  },
+  {
+    name: "Ella",
+    age: 3
+  }
+]
+
 result = [...persons.sort((a, b) => a.name > b.name ? 0 : -1)];
 console.log(result);
 
 //   .map()
 // 32. I person - arrayen ovan, gör om alla namn till versaler.
-result = [...persons.map((person) => { person.name = person.name.toUpperCase(); return person; })];
-console.log(result);
+persons = [
+  {
+    name: "Felicia",
+    age: 12
+  },
+  {
+    name: "Pelle",
+    age: 20
+  },
+  {
+    name: "Peter",
+    age: 59
+  },
+  {
+    name: "Anna",
+    age: 32
+  },
+  {
+    name: "Jocke",
+    age: 18
+  },
+  {
+    name: "Ella",
+    age: 3
+  }
+]
+
+persons.map((person) => { person.name = person.name.toUpperCase(); return person; });
+console.log(persons);
 
 // 33. I person - arrayen ovan, spegelvänd alla namn.
+persons = [
+  {
+    name: "Felicia",
+    age: 12
+  },
+  {
+    name: "Pelle",
+    age: 20
+  },
+  {
+    name: "Peter",
+    age: 59
+  },
+  {
+    name: "Anna",
+    age: 32
+  },
+  {
+    name: "Jocke",
+    age: 18
+  },
+  {
+    name: "Ella",
+    age: 3
+  }
+]
 result = [...persons.map((person) => { person.name = person.name.split('').reverse().join(''); return person; })];
 console.log(result);
 
