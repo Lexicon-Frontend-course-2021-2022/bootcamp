@@ -45,8 +45,8 @@ console.log(result);
 a = [1, 2, 3, 7, 8, 9];
 b = [4, 5, 6];
 
-result = [...a.slice(0, 3), ...b, ...a.slice(3)];
-console.log(result);
+a.splice(3, 0, ...b);
+console.log(a);
 
 // let arr = ['a', 'b', 'c'];
 // 9. Klona ovanstående array.
@@ -92,6 +92,8 @@ console.log(fruits);
 
 fruits = ['kiwi', 'apple', 'pear'];
 fruits.splice(2, 0, 'banana', 'pineapple', 'grapes');
+// Eller med splice operator (...)
+// fruits.splice(2, 0, ...['banana', 'pineapple', 'grapes']);
 console.log(fruits);
 
 // let names = ['David', 'Christoffer', 'Johan', 'Maja']
