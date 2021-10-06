@@ -120,11 +120,13 @@ console.log(result);
 // let str = 'Supercalifragilisticexpialidocious';
 // 18. Kika om strängen ovan innehåller bokstaven n.
 let str = 'Supercalifragilisticexpialidocious';
-result = str.indexOf('n') === -1 ? false : true;
+//result = str.indexOf('n') === -1 ? false : true;
+result = str.indexOf('n') !== -1;
 console.log(result);
 
 // 19. Kika om strängen ovan innehåller bokstaven x.
-result = str.indexOf('x') === -1 ? false : true;
+//result = str.indexOf('x') === -1 ? false : true;
+result = str.indexOf('x') !== -1;
 console.log(result);
 
 // 20. I ovanstående array, hitta vilket position första förekomsten av p har.
