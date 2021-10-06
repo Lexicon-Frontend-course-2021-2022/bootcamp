@@ -63,6 +63,26 @@ footer button {
     display: none;
 }
 
+/* Dice grid:
+
+   1   2   3   4
+ 1 +---+---+---+
+   |   |   |   |
+ 2 +---+---+---+
+   |   |   |   |
+ 3 +---+---+---+
+   |   |   |   |
+ 4 +---+---+---+
+
+ Ett koordinatsystem med 3x3 celler är 4x4 linjer:
+
+ * 3/4 betyder "cellen mellan linje 3 och 4"
+ * 1/3 betyder "cellerna mellan linje 1 och 3"
+
+ etc.
+*/
+
+
 /* Center dot */
 .dice.dots-1 aside:nth-child(1),
 .dice.dots-3 aside:nth-child(1),

@@ -1,8 +1,48 @@
-const dice = document.querySelector('#dice');
-const button = document.querySelector('button');
+let throws = 0;
+let currentGoal = 1;
 
-button.addEventListener('click', event => {
-  const result = Math.floor(Math.random() * 6) + 1;
-  console.log(result);
-  dice.className = `dice dots-${result}`;
+const dice = {
+  // Dynamically get # of dice sides from html document
+  sides: document.querySelector('header').children.length,
+  throw() {
+    return Math.ceil(Math.random() * this.sides);
+  }
+};
+
+document.querySelector('button').addEventListener('click', () => {
+
+  let result = dice.throw();
+
+  document.querySelector('#dice').classList = [];
+  document.querySelector('#dice').classList.add('dice', `dots-${result}`);
+
+  throws++;
+  document.querySelector('button').innerText = `Throw dice (${throws})`;
+
+  // Unfade top dices
+  if (result === currentGoal) {
+    document.querySelector(`.dots-${result}`).classList.remove('faded');
+    currentGoal++;
+  }
+
+  // All throws done
+  if (currentGoal > dice.sides) {
+
+    // Output result and reset for new game
+    setTimeout(() => {
+      alert(`You rolled a ladder in ${throws} throws!`);
+
+      document.querySelectorAll('.dice').forEach(dice => {
+        dice.classList.add('faded');
+      });
+      document.querySelector('#dice').classList = ['dice'];
+      document.querySelector('button').innerText = 'Throw Dice';
+      throws = 0;
+      currentGoal = 1;
+
+    }, 0);
+
+  }
+
+
 });
