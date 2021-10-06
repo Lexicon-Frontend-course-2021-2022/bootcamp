@@ -29,18 +29,22 @@ document.querySelector('button').addEventListener('click', () => {
   if (currentGoal > dice.sides) {
 
     // Output result and reset for new game
+    // This construct is unnessecary, but probably to let us know anout setTimeout()
     setTimeout(() => {
       alert(`You rolled a ladder in ${throws} throws!`);
 
-      document.querySelectorAll('.dice').forEach(dice => {
+      // Reset dices & button
+      document.querySelectorAll('header .dice').forEach(dice => {
         dice.classList.add('faded');
       });
       document.querySelector('#dice').classList = ['dice'];
       document.querySelector('button').innerText = 'Throw Dice';
+
+      // Reset game data
       throws = 0;
       currentGoal = 1;
 
-    }, 0);
+    }, 10);
 
   }
 
