@@ -20,7 +20,8 @@ document.querySelector('button').addEventListener('click', () => {
 
   // Unfade top dices
   if (result === currentGoal) {
-    document.querySelector(`.dots-${result}`).classList.remove('faded');
+    // Prepare for generalizing number of dices and dice sides
+    document.querySelector('header').children[currentGoal - 1].classList.remove('faded');
     currentGoal++;
   }
 
