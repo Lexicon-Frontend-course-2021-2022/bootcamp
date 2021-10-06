@@ -2,8 +2,7 @@ let throws = 0;
 let currentGoal = 1;
 
 const dice = {
-  // Dynamically get # of dice sides from html document
-  sides: document.querySelector('header').children.length,
+  sides: 6,
   throw() {
     return Math.ceil(Math.random() * this.sides);
   }
