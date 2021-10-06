@@ -84,6 +84,7 @@ footer button {
 }
 
 /* Bottom right dot */
+.dice.dots-2 aside:nth-child(3),
 .dice.dots-3 aside:nth-child(3),
 .dice.dots-4 aside:nth-child(3),
 .dice.dots-5 aside:nth-child(3),
