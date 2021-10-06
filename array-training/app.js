@@ -28,6 +28,13 @@ console.log(funkyChihuahua);
 // 6. I arrayen ovan, byt ut hamster mot tiger.
 
 animals[1] = 'tiger';
+//
+// Dynamisk lösning:
+// const oldWord = 'hamster';
+// const newWord = 'tiger';
+// if (animals.indexOf(oldWord) != -1) {
+//   animals[animals.indexOf(oldWord)] = newWord;
+// }
 console.log(animals);
 
 // let a = [1, 2, 3];
@@ -44,7 +51,6 @@ console.log(result);
 // 8. Merga ner array b på index 3 array a.
 a = [1, 2, 3, 7, 8, 9];
 b = [4, 5, 6];
-
 a.splice(3, 0, ...b);
 console.log(a);
 
