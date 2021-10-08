@@ -9,10 +9,8 @@ const getToken = async () => {
   const response = await fetch('https://blooming-reef-63913.herokuapp.com/api/token');
   const data = await response.json();
   token = data.token;
-  console.log(`Got token: ${token}`);
 };
 
-getToken();
 
 // Search for songs
 const getSongs = async query => {
@@ -72,6 +70,7 @@ const getSongs = async query => {
 
 }
 
+// Search for tracks
 searchForm.addEventListener('submit', e => {
   e.preventDefault();
 
@@ -79,6 +78,7 @@ searchForm.addEventListener('submit', e => {
 
 });
 
+// Play preview url
 const playTrack = url => {
 
   if (!url) {
@@ -90,3 +90,6 @@ const playTrack = url => {
   }
 
 };
+
+// Initialize app
+getToken();
