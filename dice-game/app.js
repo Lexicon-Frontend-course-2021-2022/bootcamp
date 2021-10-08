@@ -12,7 +12,7 @@ document.querySelector('button').addEventListener('click', () => {
 
   let result = dice.throw();
 
-  document.querySelector('#dice').classList = [];
+  document.querySelector('#dice').classList = '';
   document.querySelector('#dice').classList.add('dice', `dots-${result}`);
 
   throws++;
