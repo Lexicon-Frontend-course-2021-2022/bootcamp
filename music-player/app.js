@@ -50,9 +50,16 @@ const getSongs = async query => {
     <p>${track.name}</p>
     `;
 
-    element.addEventListener('click', e => {
-      playTrack(track.previewUrl);
-    });
+    // Handle preview
+    if (!track.previewUrl) {
+      element.style.opacity = "40%";
+      element.style.backgroundColor = "#800";
+      element.style.color = "#888";
+    } else {
+      element.addEventListener('click', e => {
+        playTrack(track.previewUrl);
+      });
+    }
     list.appendChild(element);
   };
 
