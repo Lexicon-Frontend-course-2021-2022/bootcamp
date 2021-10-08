@@ -26,8 +26,6 @@ const getSongs = async query => {
 
   const data = await response.json();
 
-  console.log(data);
-
   list.innerHTML = '';
 
   for (let i = 0; i < data.tracks.items.length; i++) {
@@ -42,29 +40,35 @@ const getSongs = async query => {
       previewUrl: item.preview_url,
     };
 
-    let element = document.createElement('div');
-    element.classList.add(['tracks']);
-    element.innerHTML = `
-    <img src="${track.image}">
-    <h1>${track.artist}</h1>
-    <p>${track.name}</p>
-    `;
+    const element = document.createElement('div');
+    element.classList.add(['track']);
 
-    // Handle preview
+    // Album image
+    const image = document.createElement('img');
+    image.src = track.image;
+
+    const artist = document.createElement('h1');
+    artist.innerText = track.artist;
+
+    const name = document.createElement('p');
+    name.innerText = track.name;
+
+    // handle preview_url available / unavailable
     if (!track.previewUrl) {
-      element.style.opacity = "40%";
-      element.style.backgroundColor = "#800";
-      element.style.color = "#888";
+      element.classList.add(['disabled']);
     } else {
+      element.classList.add(['clickable']);
       element.addEventListener('click', e => {
         playTrack(track.previewUrl);
       });
     }
+
+    // Build element and add to list
+    element.appendChild(image);
+    element.appendChild(artist);
+    element.appendChild(name);
     list.appendChild(element);
   };
-
-  const buttons = document.querySelectorAll('.tracks');
-
 
 }
 
@@ -84,4 +88,5 @@ const playTrack = url => {
     audio.src = url;
     audio.play();
   }
+
 };
