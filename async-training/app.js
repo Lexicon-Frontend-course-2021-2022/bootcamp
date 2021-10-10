@@ -46,17 +46,19 @@ letsDance('waltz')
 //   7. Fira lyckat projekt - 1s
 //   Använd setTimeout för att fördröja funktionerna. Testa med fördel både .then() och async/await .
 
-// Generic task returns promise
-const doProjectTask = (taskName, seconds) => {
+// Generic task returns promise after specified time
+const doProjectTask = (name, seconds) => {
   return new Promise(resolve => {
     setTimeout(() => {
-      resolve(`Task '${taskName}' done in ${seconds} seconds.`);
+      resolve(`Task '${name}' done in ${seconds} seconds.`);
     }, seconds * 1000);
   });
 }
 
+// Do actual project
 const webProject = async () => {
-  // Set up project tasks
+
+  // Define project tasks
   const tasks = [
     { name: 'Research', seconds: 4 },
     { name: 'Sketch up', seconds: 2 },
@@ -67,7 +69,7 @@ const webProject = async () => {
     { name: 'Celebrate', seconds: 1 }
   ];
 
-  // Execute project
+  // Execute project tasks
   for (task of tasks) {
     console.log(
       await doProjectTask(task.name, task.seconds)
