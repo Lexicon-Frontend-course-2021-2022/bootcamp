@@ -18,7 +18,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    background-color: #dadada;
+    background-color: #eee;
 }
 
 .card > * {
@@ -36,7 +36,7 @@ body {
 }
 
 #header {
-    font-size: 28px;
+    font-size: 22px;
     text-align: center;
 }
 
@@ -48,3 +48,8 @@ textarea {
     font-family: sans-serif;
 }
 
+#flag {
+    width: 32px;
+    height: 24px;
+    margin-right: 10px;
+}

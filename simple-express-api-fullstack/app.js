@@ -1,33 +1,45 @@
+/* ============================================================================
+ * Configuration
+ * ========================================================================= */
+const PORT = process.env.PORT || 9090;
+
+
+/* ============================================================================
+ * App
+ * ========================================================================= */
 const express = require('express');
 const app = express();
 
-// NOTE: Official google-translate-api is broken!
+// NOTE: Official google-translate-api is broken! Use this fork instead
 const google_translate = require('@vitalets/google-translate-api');
-const { application } = require('express');
 
-const PORT = process.env.PORT || 9090;
 
-app.use(express.static('public'));
+/* ============================================================================
+ * Endpoints
+ * ========================================================================= */
 
-app.use(express.json());
-
-/*
- * Return translated string
- */
+// Return translated string
 app.get('/api/translate/:language', (req, res) => {
   const phrase = req.query.phrase || "";
   const language = req.params.language;
-  translate(phrase, language).then(arr => {
-    res.status(arr[0]).json(arr[1]); // Spread [statuscode, object]
+  translate(phrase, language).then(r => {
+    res.status(r.statuscode).json(r);
   })
 });
 
-/*
- * Use google translate API
- */
+// Return list of supported languages 
+app.get('/api/languages', (req, res) => {
+  res.status(200).json(google_translate.languages);
+})
+
+/* ============================================================================
+ * Support functions
+ * ========================================================================= */
+
+// Use google translate API
 const translate = async (phrase, language) => {
-  let statuscode = 200;
   const object = {
+    statuscode: 200,
     from: phrase,
     language,
   };
@@ -36,22 +48,19 @@ const translate = async (phrase, language) => {
     const res = await google_translate(phrase, { to: language });
     object.to = res.text;
   } catch (e) {
-    statuscode = 400;
+    object.statuscode = 400;
   }
 
-  return [statuscode, object];
+  return object;
 
 };
 
-/*
- * Return list of supported languages 
- */
-app.get('/api/languages', (req, res) => {
-  res.status(200).json(google_translate.languages);
-})
+/* ============================================================================
+ * Red tape
+ * ========================================================================= */
 
+app.use(express.static('public'));
+app.use(express.json());
 
-app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
-});
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
