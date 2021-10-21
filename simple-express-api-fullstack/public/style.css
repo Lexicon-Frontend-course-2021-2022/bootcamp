@@ -5,6 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
+    background-color: #ccc;
 }
 
 .card {
@@ -16,6 +17,8 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+    background-color: #dadada;
 }
 
 .card > * {
@@ -29,13 +32,19 @@ body {
 
 #languages {
     width: 100%;
+    margin: 0 10px 0 0;
 }
 
 #header {
-    font-size: 18px;
+    font-size: 28px;
     text-align: center;
 }
 
 .waiting {
     cursor: wait !important;
 }
+
+textarea {
+    font-family: sans-serif;
+}
+
