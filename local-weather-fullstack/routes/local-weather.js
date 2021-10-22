@@ -71,11 +71,11 @@ route.get('/:lat/:lon', (req, res) => {
     language: 'sv'
   }, (err, result) => {
 
-    /*
-     * Handle errors
-    */
     if (err) {
 
+      /*
+       * Handle error
+       */
       res
         .status(400)
         .json({
