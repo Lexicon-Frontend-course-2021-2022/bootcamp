@@ -37,7 +37,6 @@ body {
 }
 
 .today {
-    background-color: #eee;
     padding: 10px;
     display: flex;
     justify-content: space-between;
