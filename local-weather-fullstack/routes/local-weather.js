@@ -67,8 +67,7 @@ route.get('/:lat/:lon', (req, res) => {
   // Get weather using npm module 'weather-js'
   weather.find({
     search: `${req.params.lat},${req.params.lon}`,
-    degreeType: 'C',
-    language: 'sv'
+    degreeType: 'C'
   }, (err, result) => {
 
     if (err) {
