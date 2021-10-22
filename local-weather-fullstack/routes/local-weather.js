@@ -81,9 +81,10 @@ route.get('/:lat/:lon', (req, res) => {
       res
         .status(400)
         .json({
-          status: 'error'
+          status: 'error',
+          error: err
         });
-      return console.log(err);
+      return;
 
     } else {
 
@@ -127,7 +128,7 @@ route.get('/:lat/:lon', (req, res) => {
           forecast
         });
 
-      return console.log(result[0]);
+      return;
     }
 
   })

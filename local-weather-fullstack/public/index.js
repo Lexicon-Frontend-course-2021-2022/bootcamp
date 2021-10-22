@@ -13,7 +13,6 @@ navigator.geolocation.getCurrentPosition(res => {
   // 
   getLocalWeather(res.coords.latitude, res.coords.longitude)
     .then(weather => {
-      console.log(weather);
 
       // Ok. We have weather...
       if (weather.status === 'success') {
